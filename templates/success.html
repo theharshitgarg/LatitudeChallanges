@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+<h1 class="text-center">Registration Successful</h1>
+<h3 class="text-center">{{ registration_id }}</h3>
+{% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+      {% for category, message in messages %}
+        <ul class="flashes text-center col-md-offset-2 col-md-8 list-unstyled alert {% if category == 'success' %} alert-success {% else %} alert-danger {% endif %}" >
+            <li> {{ message }}</li>
+        </ul>
+      {% endfor %}
+  {% endif %}
+{% endwith %}
+
+<div class="container">
+
+</div>
+{% endblock %}

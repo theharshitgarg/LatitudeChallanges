@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block content %}
+<h1 class="text-center">Registration Not Successful</h1>
+{% for message in form.first_name.errors %}
+    <ul class="flashes text-center col-md-offset-2 col-md-8 list-unstyled alert alert-danger" >
+        <li> {{ message }}</li>
+    </ul>
+{% endfor %}
+{% for message in form.last_name.errors %}
+    <ul class="flashes text-center col-md-offset-2 col-md-8 list-unstyled alert alert-danger" >
+        <li> {{ message }}</li>
+    </ul>
+{% endfor %}
+{% for message in form.email.errors %}
+    <ul class="flashes text-center col-md-offset-2 col-md-8 list-unstyled alert alert-danger" >
+        <li> {{ message }}</li>
+    </ul>
+{% endfor %}
+{% for message in form.photo_id.errors %}
+    <ul class="flashes text-center col-md-offset-2 col-md-8 list-unstyled alert alert-danger" >
+        <li> {{ message }}</li>
+    </ul>
+{% endfor %}
+<div class="container">
+
+</div>
+{% endblock %}
